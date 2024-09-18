@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://c0d76ahasptp3"]
+
+[ext_resource type="Script" path="res://trash.gd" id="1_fp6sg"]
+[ext_resource type="Texture2D" uid="uid://cixce67dj75tr" path="res://assets/trash assets/trash assets/garbage bag 2.png" id="1_kuehw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6pran"]
+atlas = ExtResource("1_kuehw")
+region = Rect2(0, 0, 19, 15)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_frvid"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6pran")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8cdfo"]
+radius = 11.0454
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_fp6sg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-6.5, -6.5)
+scale = Vector2(1.21053, 1.4)
+sprite_frames = SubResource("SpriteFrames_frvid")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-6, -7)
+shape = SubResource("CircleShape2D_8cdfo")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
