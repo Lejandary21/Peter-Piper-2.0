@@ -1,9 +1,9 @@
 [gd_scene load_steps=37 format=3 uid="uid://dp6b0hkufeoq6"]
 
-[ext_resource type="Texture2D" uid="uid://dfkyuvxeue2n5" path="res://Free-Homeless-Character-Sprite-Sheets-Pixel-Art/Homeless_3/Idle.png" id="1_wa30p"]
+[ext_resource type="Texture2D" path="res://Free-Homeless-Character-Sprite-Sheets-Pixel-Art/Homeless_3/Idle.png" id="1_wa30p"]
 [ext_resource type="Script" path="res://peter.gd" id="1_ws3f3"]
-[ext_resource type="Texture2D" uid="uid://6h85kefh4hew" path="res://Free-Homeless-Character-Sprite-Sheets-Pixel-Art/Homeless_3/Walk.png" id="3_msdy1"]
-[ext_resource type="Texture2D" uid="uid://befot1fyes2pr" path="res://Free-Homeless-Character-Sprite-Sheets-Pixel-Art/Homeless_3/Jump.png" id="4_8d42f"]
+[ext_resource type="Texture2D" path="res://Free-Homeless-Character-Sprite-Sheets-Pixel-Art/Homeless_3/Walk.png" id="3_msdy1"]
+[ext_resource type="Texture2D" path="res://Free-Homeless-Character-Sprite-Sheets-Pixel-Art/Homeless_3/Jump.png" id="4_8d42f"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7qbqb"]
 atlas = ExtResource("1_wa30p")

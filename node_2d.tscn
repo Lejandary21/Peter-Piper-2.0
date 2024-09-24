@@ -1,7 +1,8 @@
-[gd_scene load_steps=47 format=3 uid="uid://cm1d6e2iudwn5"]
+[gd_scene load_steps=50 format=3 uid="uid://cm1d6e2iudwn5"]
 
 [ext_resource type="Texture2D" uid="uid://c0ofkwwie1odo" path="res://assets/brackeys_platformer_assets/sprites/platforms.png" id="1_hdlau"]
 [ext_resource type="PackedScene" uid="uid://dp6b0hkufeoq6" path="res://peter.tscn" id="1_jtf6k"]
+[ext_resource type="PackedScene" uid="uid://cxhkyyr3jmhoh" path="res://patayyyyy.tscn" id="1_xyo0g"]
 [ext_resource type="Texture2D" uid="uid://btec1kmr6odhp" path="res://pixlr-image-generator-66bd23bf5f6fa52a39d80218 (1).png" id="2_6jo8d"]
 [ext_resource type="Texture2D" uid="uid://oce0e1rc3qkx" path="res://assets/brackeys_platformer_assets/sprites/Textures-16.png" id="2_tdfri"]
 [ext_resource type="Texture2D" uid="uid://ymc6fpu24krx" path="res://assets/brackeys_platformer_assets/sprites/bg 4.jpg" id="2_wlmu4"]
@@ -11,9 +12,13 @@
 [ext_resource type="PackedScene" uid="uid://cab13llthy138" path="res://scenes/platform.tscn" id="7_43s0p"]
 [ext_resource type="Texture2D" uid="uid://cte2oo65m6alb" path="res://assets/brackeys_platformer_assets/sprites/Dracula's Castle(320X180).png" id="8_ifrie"]
 [ext_resource type="PackedScene" uid="uid://c0d76ahasptp3" path="res://trash.tscn" id="11_5b6ln"]
+[ext_resource type="FontFile" uid="uid://bf28f0odh64vg" path="res://assets/PixelOperator8-Bold.ttf" id="12_5ttei"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ovvt4"]
+distance = -125.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_h38c7"]
-distance = -51.0
+distance = -213.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h4hxg"]
 texture = ExtResource("1_hdlau")
@@ -21238,6 +21243,12 @@ _data = {
 
 [node name="Node2D" type="Node2D"]
 
+[node name="PATAYYYYY" parent="." instance=ExtResource("1_xyo0g")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PATAYYYYY"]
+position = Vector2(2, 101)
+shape = SubResource("WorldBoundaryShape2D_ovvt4")
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
@@ -21344,12 +21355,14 @@ libraries = {
 autoplay = "new_animation"
 
 [node name="Peter" parent="." instance=ExtResource("1_jtf6k")]
-position = Vector2(-115, -22)
+position = Vector2(-104, -20)
 
 [node name="Camera2D" type="Camera2D" parent="Peter"]
 position = Vector2(13, -16)
 ignore_rotation = false
 zoom = Vector2(2, 2)
+limit_bottom = 165
+limit_smoothed = true
 
 [node name="Platform19" parent="." instance=ExtResource("7_43s0p")]
 position = Vector2(12331, -811)
@@ -21470,11 +21483,71 @@ position = Vector2(12273, -728)
 [node name="Area2D33" parent="." instance=ExtResource("11_5b6ln")]
 position = Vector2(12299, -738)
 
-[node name="Area2D33" parent="Area2D33" instance=ExtResource("11_5b6ln")]
-position = Vector2(12301, -734)
-
 [node name="Area2D34" parent="." instance=ExtResource("11_5b6ln")]
 position = Vector2(12326, -737)
 
 [node name="Area2D35" parent="." instance=ExtResource("11_5b6ln")]
 position = Vector2(12246, -757)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -315.0
+offset_top = -98.0
+offset_right = -97.0
+offset_bottom = -68.0
+theme_override_fonts/font = ExtResource("12_5ttei")
+theme_override_font_sizes/font_size = 8
+text = "Use wasd or arrow keys to move"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 27.0
+offset_top = -112.0
+offset_right = 332.0
+offset_bottom = -89.0
+theme_override_fonts/font = ExtResource("12_5ttei")
+theme_override_font_sizes/font_size = 8
+text = "Collect trash to unclog the sewer pipelines"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 1111.0
+offset_top = -27.0
+offset_right = 1240.0
+offset_bottom = -4.0
+theme_override_fonts/font = ExtResource("12_5ttei")
+theme_override_font_sizes/font_size = 8
+text = "Watch your step :)"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 3711.0
+offset_top = -375.0
+offset_right = 3761.0
+offset_bottom = -352.0
+theme_override_fonts/font = ExtResource("12_5ttei")
+theme_override_font_sizes/font_size = 8
+text = "Level 2"
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 10275.0
+offset_top = -1112.0
+offset_right = 10325.0
+offset_bottom = -1089.0
+theme_override_fonts/font = ExtResource("12_5ttei")
+theme_override_font_sizes/font_size = 8
+text = "Level 3"
+
+[node name="Label6" type="Label" parent="."]
+offset_left = 11215.0
+offset_top = -1296.0
+offset_right = 11265.0
+offset_bottom = -1273.0
+theme_override_fonts/font = ExtResource("12_5ttei")
+theme_override_font_sizes/font_size = 8
+text = "Don't fall down :)"
+
+[node name="Label7" type="Label" parent="."]
+offset_left = 14470.0
+offset_top = -1069.0
+offset_right = 14752.0
+offset_bottom = -1046.0
+theme_override_fonts/font = ExtResource("12_5ttei")
+theme_override_font_sizes/font_size = 8
+text = "Congratulations! You made it to the end!"
