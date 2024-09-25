@@ -5,7 +5,7 @@ extends Area2D
 
 
 func _on_body_entered(body):	
-	print("madarchodd")	
+	print("You died")	
 	timer.start()
 	
 
