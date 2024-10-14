@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c0ofkwwie1odo" path="res://assets/brackeys_platformer_assets/sprites/platforms.png" id="1_hdlau"]
 [ext_resource type="PackedScene" uid="uid://dp6b0hkufeoq6" path="res://peter.tscn" id="1_jtf6k"]
 [ext_resource type="Script" path="res://game_manager.gd" id="1_srkqd"]
-[ext_resource type="PackedScene" path="res://patayyyyy.tscn" id="1_xyo0g"]
+[ext_resource type="PackedScene" uid="uid://cxhkyyr3jmhoh" path="res://patayyyyy.tscn" id="1_xyo0g"]
 [ext_resource type="Texture2D" uid="uid://btec1kmr6odhp" path="res://pixlr-image-generator-66bd23bf5f6fa52a39d80218 (1).png" id="2_6jo8d"]
 [ext_resource type="Texture2D" uid="uid://oce0e1rc3qkx" path="res://assets/brackeys_platformer_assets/sprites/Textures-16.png" id="2_tdfri"]
 [ext_resource type="Texture2D" uid="uid://ymc6fpu24krx" path="res://assets/brackeys_platformer_assets/sprites/bg 4.jpg" id="2_wlmu4"]
@@ -7706,16 +7706,16 @@ offset_right = 332.0
 offset_bottom = -89.0
 theme_override_fonts/font = ExtResource("12_5ttei")
 theme_override_font_sizes/font_size = 8
-text = "Collect trash to unclog the sewer pipelines"
+text = "Your objective is to collect trash to unclog the sewer pipelines."
 
 [node name="Label3" type="Label" parent="."]
-offset_left = 1111.0
-offset_top = -27.0
-offset_right = 1240.0
-offset_bottom = -4.0
+offset_left = 957.0
+offset_top = -60.0
+offset_right = 1430.0
+offset_bottom = -37.0
 theme_override_fonts/font = ExtResource("12_5ttei")
 theme_override_font_sizes/font_size = 8
-text = "Watch your step :)"
+text = "Watch your step. If you fall into the water, you die. You get sent back to the start."
 
 [node name="Label4" type="Label" parent="."]
 offset_left = 3711.0
@@ -7752,3 +7752,12 @@ offset_bottom = -1046.0
 theme_override_fonts/font = ExtResource("12_5ttei")
 theme_override_font_sizes/font_size = 8
 text = "Congratulations! You made it to the end!"
+
+[node name="Label8" type="Label" parent="."]
+offset_left = 2277.0
+offset_top = -89.0
+offset_right = 2802.0
+offset_bottom = -66.0
+theme_override_fonts/font = ExtResource("12_5ttei")
+theme_override_font_sizes/font_size = 8
+text = "The number here goes up when you collect trash. Basically the scoreboard."
